@@ -24,12 +24,11 @@ REQUIREMENTS/DEPENDENCIES:
     logger = logs.get_logger()
 """
 
-import validators
-import scraper_functs as scr
-import config_logging as logs
-import sql_functs as sql
-import vis_functs as vis
-
+import pubmed_tool.validators as validators
+import pubmed_tool.scraper_functs as scr
+import pubmed_tool.config_logging as logs
+import pubmed_tool.sql_functs as sql
+import pubmed_tool.vis_functs as vis
 import os
 import pandas as pd
 import panel as pn

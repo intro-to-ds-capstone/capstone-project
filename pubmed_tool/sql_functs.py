@@ -20,9 +20,9 @@ REQUIREMENTS/DEPENDENCIES:
 """
 
 import sqlite3
-import validators
+import pubmed_tool.validators as validators
 import pandas as pd
-import config_logging as logs
+import pubmed_tool.config_logging as logs
 
 logger = logs.get_logger()
 

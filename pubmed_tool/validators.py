@@ -2,7 +2,7 @@ import re
 import os
 import datetime as dt
 import pandas as pd
-import config_logging as logs
+import pubmed_tool.config_logging as logs
 
 logger = logs.get_logger()
 
