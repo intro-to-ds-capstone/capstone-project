@@ -23,7 +23,6 @@ REQUIREMENTS/DEPENDENCIES:
     config_logging as logs
     logger = logs.get_logger()
 """
-
 import pubmed_tool.validators as validators
 import pubmed_tool.scraper_functs as scr
 import pubmed_tool.config_logging as logs
