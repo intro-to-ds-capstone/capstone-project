@@ -46,7 +46,7 @@ setup(
 	# Name of the package 
 	name=name,
 	# Packages to include into the distribution 
-	packages=find_packages('.'),
+	packages=find_packages(),
 	version='1.0.0',
     #https://help.github.com/articles/licensing-a-repository
 	license='MIT',
