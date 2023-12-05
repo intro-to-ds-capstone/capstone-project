@@ -29,7 +29,6 @@ import scraper_functs as scr
 import config_logging as logs
 import sql_functs as sql
 import vis_functs as vis
-
 import os
 import pandas as pd
 import panel as pn
