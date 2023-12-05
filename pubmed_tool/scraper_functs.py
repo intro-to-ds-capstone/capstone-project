@@ -5,6 +5,9 @@ Contains functions specific to scraping from
 PubMED records
 
 FUNCTIONS:
+    pubmed_search_ids(): passes query to 
+        pubmed, and retrieves a list of
+        PMIDs
     pubmed_fetch_records(): obtains XML 
         records from PMID(s), and trims 
         to the Medline Citation
