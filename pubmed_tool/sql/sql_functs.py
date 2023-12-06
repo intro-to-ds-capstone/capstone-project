@@ -425,12 +425,16 @@ def query(db_name = 'publications.db',
     # Strip strings, make names lowercase
     # ---------------------------------------------------------
         if last_nm:
+            print('last name')
             last_nm = last_nm.strip().lower()
         if first_nm:
-            first_nm = last_nm.strip().lower()
+            print('first name')
+            first_nm = first_nm.strip().lower()
         if initials_nm:
-            initials_nm = last_nm.strip().lower()
+            print('initials')
+            initials_nm = initials_nm.strip().lower()
         if any_nm:
+            print('any')
             any_nm = any_nm.strip().lower()
 
     # Table Existence
