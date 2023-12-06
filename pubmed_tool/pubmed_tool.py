@@ -296,7 +296,7 @@ def scraper(keyword, start_date, end_date, email, project_dir = None,
                     overwrite = False
                 else:
                     chunk.to_csv(path_or_buf= path, mode = 'a', index = True,
-                            header = True)
+                            header = False)
         
     # Non-chunk processing
     # ------------------------------------------------------------------------  
@@ -330,7 +330,7 @@ def scraper(keyword, start_date, end_date, email, project_dir = None,
                              header = True)
             if path and not overwrite:
                 chunk.to_csv(path_or_buf= path, mode = 'a', index = True,
-                             header = True)
+                             header = False)
 
     # Success Message
     # ========================================================================
