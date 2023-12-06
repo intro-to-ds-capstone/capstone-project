@@ -416,31 +416,33 @@ def query(db_name = 'publications.db',
     # =========================================================
     # Database Path
     # ---------------------------------------------------------
+        a = 'db_name'
         db_name = validators.path(project_dir = project_dir,
                                 file_name = db_name,
                                 must_exist = True,
                                 overwrite = True,
                                 req_suffix = ['.db'])
 
-    # Strip strings, make names lowercase
-    # ---------------------------------------------------------
-        if last_nm:
-            print('last name')
-            last_nm = last_nm.strip().lower()
-        if first_nm:
-            print('first name')
-            first_nm = first_nm.strip().lower()
-        if initials_nm:
-            print('initials')
-            initials_nm = initials_nm.strip().lower()
-        if any_nm:
-            print('any')
-            any_nm = any_nm.strip().lower()
-
     # Table Existence
     # ---------------------------------------------------------
         conx = sqlite3.connect(db_name)
         cursor = conx.cursor()
+        
+        a = ''
+    # Strip strings, make names lowercase
+    # ---------------------------------------------------------
+        if last_nm:
+            a = 'last name'
+            last_nm = last_nm.strip().lower()
+        if first_nm:
+            a = 'first name'
+            first_nm = first_nm.strip().lower()
+        if initials_nm:
+            a = 'initials'
+            initials_nm = initials_nm.strip().lower()
+        if any_nm:
+            a = 'any_name'
+            any_nm = any_nm.strip().lower()
 
     # Check if Papers table exists
     # ---------------------------------------------------------
@@ -564,7 +566,8 @@ def query(db_name = 'publications.db',
     except Exception as e:
         message = ''.join([
             'There was an error in querying SQLite.',
-            f'\n\t Error details: {e}'
+            f'\n\t Error details: {e}',
+            f'{a}'
             ])
         logs.display_message(message, type = 'error')
 
