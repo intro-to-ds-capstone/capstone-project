@@ -47,7 +47,7 @@ import pubmed_tool.validators as validators
 import re
 from Bio import Entrez
 import datetime as dt
-import pubmed_tool.config_logging as logs
+import pubmed_tool.logs as logs
 
 logger = logs.get_logger()
 
