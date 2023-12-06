@@ -34,7 +34,7 @@ import holoviews as hv
 import hvplot.pandas
 import panel as pn
 import pubmed_tool.validators as validators
-import pubmed_tool.config_logging as logs
+import pubmed_tool.logs as logs
 
 logger = logs.get_logger()
 
@@ -566,7 +566,8 @@ def interactive(in_df,
     # Format Logo and Subtitle
     # ------------------------------------------------------------------------
         if logo_path:
-            logo = validators.path(logo_path)
+            logo = validators.path(logo_path, req_suffix = ['.png', '.jpeg', 
+                                                            '.jpg', '.gif'])
         if logo_path:
             logo = pn.panel(logo_path, width=200, align='start')
         else:
